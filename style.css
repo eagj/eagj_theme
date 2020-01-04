@@ -1,3 +1,6 @@
+/******************************
+* INDEX *
+******************************/
 .card-body.col-lg-4.bg-white {
     transform: rotate(0deg);
     transition: transform .6s ease;
@@ -15,4 +18,14 @@
     height:100%;
     width:100%;
     object-fit: cover;
+}
+
+/******************************
+* POST *
+******************************/
+.post .image{
+    height:80vh;
+}
+.post .image img{
+    height:100%;
 }
