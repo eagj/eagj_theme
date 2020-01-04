@@ -5,8 +5,15 @@
             <!--entrada-->
             <div class="card-body col-lg-12 p-0">
                 <div class="image">
-                    <img src="https://live.staticflickr.com/2896/14066335439_e01070dbc0_k_d.jpg" alt="foto"
-                        class="img-fluid">
+                <?php
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail('post-thumbnails', array(
+                                'class' => 'img-fluid'
+                            ));
+                        }
+                        ?>
+                    <!-- <img src="https://live.staticflickr.com/2896/14066335439_e01070dbc0_k_d.jpg" alt="foto"
+                        class="img-fluid"> -->
                 </div>
                 <div class="container">
                     <div class="row">

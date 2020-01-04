@@ -12,8 +12,15 @@
             <div class="card-body col-lg-6 col-xl-4 bg-white entrada">
                 <div class="image">
                     <a href="<?php the_permalink(); ?>">
-                        <img src="https://live.staticflickr.com/2896/14066335439_f1cda56a70_c_d.jpg" alt="foto"
-                            class="img-fluid">
+                        <!-- <img src="https://live.staticflickr.com/2896/14066335439_f1cda56a70_c_d.jpg" alt="foto"
+                            class="img-fluid"> -->
+                        <?php
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail('post-thumbnails', array(
+                                'class' => 'img-fluid'
+                            ));
+                        }
+                        ?>
                     </a>
                 </div>
                 <div class="row">
