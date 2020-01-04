@@ -1,47 +1,5 @@
-<!doctype html>
-<html lang="en">
+<?php get_header();?>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        
-        <!-- Cargamos los archivos (style.css) que hay en functions.php -->
-        <?php wp_head();?>
-    
-    <title>Blog</title>
-</head>
-
-<body>
-    <!--menu-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">LOGO</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Blog</a>
-                    <a class="nav-item nav-link" href="#">Curriculum</a>
-                    <a class="nav-item nav-link" href="#">Contactar</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!--menu-->
-
-    <!--TITULO-->
-    <div class="container">
-        <h2 class="text-center my-5 text-primary display">Diseño, Prototipado y creación de layaouts</h2>
-        <!--TITULO-->
-    </div>
     <div class="container-fluid">
         <!--entradas-->
         <div class="row">
@@ -122,17 +80,5 @@
         </div>
         <!--Paginacion-->
     </div>
-    <footer class="container-fluid py-4 mt-4 text-center text-light bg-dark">
-        <h5> EAGJ 2020</h5>
-    </footer>
-
-
-    <!-- Optional JavaScript -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script> -->
-        <!-- Cargamos los archivos (pooper) que hay en functions.php y añade la barra de wordpress en el top -->
-        <?php wp_footer()?>
-</body>
-
-</html>
+    
+  <?php get_footer();?>
