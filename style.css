@@ -1,0 +1,18 @@
+.card-body.col-lg-4.bg-white {
+    transform: rotate(0deg);
+    transition: transform .6s ease;
+}
+.card-body.col-lg-4.bg-white:hover {
+    transform: scale(1.05) translateY(-20px);
+    z-index: 2;
+    box-shadow: 0 0 40px rgba(0,0,0,.15);
+}
+.image{
+
+    height:325px;
+}
+.image img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
