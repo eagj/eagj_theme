@@ -9,6 +9,15 @@
  * @since 1.0.0
  */
 
+
+ /**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/template_parts/navbar.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
 if (!function_exists('eagj_scripts') ):
     function eagj_scripts(){
         //CARGAMOS HOJA DE ESTILOS PROPIA
@@ -35,7 +44,8 @@ if (!function_exists( 'eagj_setup' ) ):
 endif;
 add_action( 'after_setup_theme', 'eagj_setup' );
 
- //TITLE
+
+//TITLE
  add_filter( 'wp_title', 'baw_hack_wp_title_for_home' );
 function baw_hack_wp_title_for_home( $title )
 {
@@ -44,3 +54,15 @@ function baw_hack_wp_title_for_home( $title )
   }
   return $title;
 }
+
+//REGISTRAR MENU
+if (!function_exists( 'eagj_register_my_menus' ) ):
+  function eagj_register_my_menus() {
+    register_nav_menus(
+      array(
+        'menu-principal' => __( 'Menú superior' ),      
+      )
+    );
+  }
+endif;
+ add_action( 'init', 'eagj_register_my_menus' );
