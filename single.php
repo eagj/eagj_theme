@@ -5,7 +5,7 @@
             <!--entrada-->
             <div class="card-body col-lg-12 p-0">
                 <div class="image">
-                    <?php the_post_thumbnail('post-thumbnails', array('class' => 'img-fluid'));?>                    
+                    <?php the_post_thumbnail('post-thumbnails', array('class' => 'img-fluid'));?>
                 </div>
                 <div class="container">
                     <div class="row">
