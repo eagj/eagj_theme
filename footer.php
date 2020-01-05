@@ -1,5 +1,5 @@
 <footer class="container-fluid py-4 mt-4 text-center text-light bg-dark">
-        <h5> EAGJ 2020</h5>
+        <h5> EAGJ <?php echo date('Y')?></h5>
         <?php 
         wp_nav_menu( array(
             'theme_location'    => 'menu-social',
