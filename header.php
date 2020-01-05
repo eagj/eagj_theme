@@ -27,26 +27,26 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav ml-auto">               
-                    <a class="nav-item nav-link active" href="<?php echo home_url('/')?>">Inicio <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Blog</a>
-                    <a class="nav-item nav-link" href="#">Curriculum</a>
-                    <a class="nav-item nav-link" href="#">Contactar</a>                   
-                </div>
-            </div>  -->
+            
             <?php
+            if (has_nav_menu('menu-principal')):
                 wp_nav_menu( array(
                     'theme_location'    => 'menu-principal',
                     'depth'             => 2,
-                    'container'         => 'div',
+                    'container'         => 'nav',
                     'container_class'   => 'collapse navbar-collapse',
                     'container_id'      => 'navbarNav',
                     'menu_class'        => 'nav navbar-nav ml-auto ',
                     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'            => new WP_Bootstrap_Navwalker(),
                 ) );
-            ?>
+            else:?>
+                <nav id="navbarNav" class="collapse navbar-collapse">
+                    <ul id="menu-inicio" class="nav navbar-nav ml-auto ">
+                        <?php wp_list_pages('title_li')?>
+                    </ul>
+                </nav>            
+            <?php endif; ?>
         </div>
     </nav>
     <!--menu-->

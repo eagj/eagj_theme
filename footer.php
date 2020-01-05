@@ -1,5 +1,14 @@
 <footer class="container-fluid py-4 mt-4 text-center text-light bg-dark">
         <h5> EAGJ 2020</h5>
+        <?php 
+        wp_nav_menu( array(
+            'theme_location'    => 'menu-social',
+            'container'         => 'nav',
+            'container_class'   => '',
+            'container_id'      => '',
+            'menu_class'        => 'nav navbar-nav ml-auto ',            
+        ) );
+        ?>
     </footer>
 
 

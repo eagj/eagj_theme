@@ -60,7 +60,8 @@ if (!function_exists( 'eagj_register_my_menus' ) ):
   function eagj_register_my_menus() {
     register_nav_menus(
       array(
-        'menu-principal' => __( 'Menú superior' ),      
+        'menu-principal' => __( 'Menú superior' ),
+        'menu-social' => __( 'Menú Social' ),      
       )
     );
   }
