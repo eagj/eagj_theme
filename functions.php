@@ -26,10 +26,14 @@ if (!function_exists('eagj_scripts') ):
 endif;
 add_action( 'wp_enqueue_scripts', 'eagj_scripts' );
 
-//HABILITAR IMAGENES DESTACADAS
-if ( function_exists( 'add_theme_support' ) ) {
+
+if (!function_exists( 'eagj_setup' ) ):
+  function eagj_setup(){
+    //HABILITAR IMAGENES DESTACADAS
     add_theme_support( 'post-thumbnails' );    
  }
+endif;
+add_action( 'after_setup_theme', 'eagj_setup' );
 
  //TITLE
  add_filter( 'wp_title', 'baw_hack_wp_title_for_home' );
