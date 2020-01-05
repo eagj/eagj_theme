@@ -20,14 +20,14 @@
     <!--menu-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">LOGO</a>
+            <a class="navbar-brand" href="<?php echo home_url('/')?>">LOGO</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="<?php echo home_url('/')?>">Inicio <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="#">Blog</a>
                     <a class="nav-item nav-link" href="#">Curriculum</a>
                     <a class="nav-item nav-link" href="#">Contactar</a>

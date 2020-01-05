@@ -18,7 +18,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 mt-n3 bg-white">
-                            <h2 class="py-3 text-center"><?php the_title();?></h2>
+                            <p><?php the_time(get_option('date_format'))?></p> <!-- muestra la fecha como se ponga en formato fecha de ajustes-->
+                            <h2 class="py-3 text-center"><?php the_title();?></h2>                         
                             <?php the_content();?>
                         </div>
                     </div>
