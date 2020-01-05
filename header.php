@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html <?php language_attributes();?> >
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo('charset')?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     
@@ -11,7 +11,9 @@
         <!-- Cargamos los archivos (style.css) que hay en functions.php -->
         <?php wp_head();?>
     
-    <title>Blog</title>
+        <title><?php wp_title(''); ?></title>
+
+
 </head>
 
 <body>
