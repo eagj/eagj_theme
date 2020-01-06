@@ -11,13 +11,18 @@
 
 
  /**
- * Register Custom Navigation Walker
+ * Registramos paginacion bootstrap
  */
-function register_navwalker(){
-	require_once get_template_directory() . '/template_parts/navbar.php';
-}
-add_action( 'after_setup_theme', 'register_navwalker' );
+if (!function_exists('eagj_scripts') ):
+  function eagj_register_navwalker(){
+    require_once get_template_directory() . '/template_parts/navbar.php';
+  }
+endif;
+add_action( 'after_setup_theme', 'eagj_register_navwalker' );
 
+ /**
+ * Registramos estilos y js
+ */
 if (!function_exists('eagj_scripts') ):
     function eagj_scripts(){
         //CARGAMOS HOJA DE ESTILOS PROPIA
@@ -35,7 +40,9 @@ if (!function_exists('eagj_scripts') ):
 endif;
 add_action( 'wp_enqueue_scripts', 'eagj_scripts' );
 
-
+ /**
+ * Registramos imagen destcada y html5
+ */
 if (!function_exists( 'eagj_setup' ) ):
   function eagj_setup(){
     //HABILITAR IMAGENES DESTACADAS
@@ -65,7 +72,9 @@ function baw_hack_wp_title_for_home( $title )
   return $title;
 }
 
-//REGISTRAR MENU
+ /**
+ * Registramos menú
+ */
 if (!function_exists( 'eagj_register_my_menus' ) ):
   function eagj_register_my_menus() {
     register_nav_menus(
@@ -78,7 +87,9 @@ if (!function_exists( 'eagj_register_my_menus' ) ):
 endif;
  add_action( 'init', 'eagj_register_my_menus' );
 
- //REGISTRAR SIDEBARS
+ /**
+ * Registramos Sidebar/s
+ */
 if (!function_exists( 'eagj_register_sidebars' ) ):
   function eagj_register_sidebars() {
     register_sidebar(
