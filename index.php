@@ -34,8 +34,11 @@
         <section class="card-body paginacion">        
             <?php get_template_part('template_parts/content', 'pagination')?>
         </section>        
-        
         <!--Paginacion-->
+        <!-- PRUEBA DE SIDEBAR-->
+        <aside>
+        <?php get_sidebar();?>
+        </aside>
     </div>
 
   <?php get_footer();?>

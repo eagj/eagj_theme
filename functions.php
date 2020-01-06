@@ -67,3 +67,33 @@ if (!function_exists( 'eagj_register_my_menus' ) ):
   }
 endif;
  add_action( 'init', 'eagj_register_my_menus' );
+
+ //REGISTRAR SIDEBARS
+if (!function_exists( 'eagj_register_sidebars' ) ):
+  function eagj_register_sidebars() {
+    register_sidebar(
+      array(
+      'name' => __('Sidebar Principal', 'EAGJTheme'),
+      'id'=>'main_sidebar',
+      'description'=>__('Añadir widgets en el sidebar principal', 'EAGJTheme'),
+      'before_widget'=>'<article id="%1$s" class="Widget %2$s">',
+      'after_widget'=>'</article>',
+      'before_title'=>'<h3>',
+      'after_title'=>'</h3>'
+    ));
+    
+    register_sidebar(
+      array(
+        'name'          => __( 'Footer', 'EAGJTheme' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Añadir widgets en el sidebar principal', 'EAGJTheme' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+      ));
+
+    
+  }
+endif;
+ add_action( 'widgets_init', 'eagj_register_sidebars' );
