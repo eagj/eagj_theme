@@ -1,4 +1,16 @@
-<!doctype html>
+<?php
+/**
+ * The header for our theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package WordPress
+ * @subpackage EAGJ_THEME
+ * @since 1.0.0
+ */
+?><!doctype html>
 <html <?php language_attributes();?> >
 
 <head>
@@ -16,7 +28,7 @@
 
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
     <!--menu-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
