@@ -1,9 +1,5 @@
 <?php get_header();?>
- <!--TITULO-->
- <div class="container">
-        <h2 class="text-center my-5 text-primary display">Diseño, Prototipado y creación de layaouts</h2>
-        <!--TITULO-->
-    </div>
+ 
     <div class="container-fluid">
         <!--entradas-->
         <div class="row">

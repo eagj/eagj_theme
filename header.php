@@ -62,5 +62,10 @@
         </div>
     </nav>
     <!--menu-->
-
+ <!--TITULO-->
+    <div class="container">
+        <h2 class="text-center my-5 text-primary display"><?php bloginfo( 'description' );?></h2>
+    </div>
+ <!--TITULO-->
+    
    
