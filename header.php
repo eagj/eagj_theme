@@ -29,7 +29,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php //get_header('wordpress')?>
+    <?php get_header('wordpress')?>
     <!--menu-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">    
         <div class="container-fluid">
