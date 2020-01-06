@@ -39,7 +39,17 @@ add_action( 'wp_enqueue_scripts', 'eagj_scripts' );
 if (!function_exists( 'eagj_setup' ) ):
   function eagj_setup(){
     //HABILITAR IMAGENES DESTACADAS
-    add_theme_support( 'post-thumbnails' );    
+    add_theme_support( 'post-thumbnails' );
+
+    //HABILITAR HTML5
+    add_theme_support('html5', array(
+      'comment-list',
+      'comment-form',
+      'search-form',
+      'gallery',
+      'caption'
+    ));
+
  }
 endif;
 add_action( 'after_setup_theme', 'eagj_setup' );

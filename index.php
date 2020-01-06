@@ -36,7 +36,7 @@
         </section>        
         <!--Paginacion-->
         <!-- PRUEBA DE SIDEBAR PERO LO COMENTO PORQUE NO LO NECESITO-->
-        <//?php get_sidebar();?> 
+        <?php get_sidebar();?> 
     </div>
 
   <?php get_footer();?>
