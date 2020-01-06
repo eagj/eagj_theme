@@ -57,6 +57,14 @@ if (!function_exists( 'eagj_setup' ) ):
       'caption'
     ));
 
+     //LOGO PERSONZALIDO
+     add_theme_support('custom-logo', array(
+      'height' => 100,
+      'width' => 100,
+      'flex-height'=>true,
+      'flex-width'=>true,
+    ));
+
  }
 endif;
 add_action( 'after_setup_theme', 'eagj_setup' );

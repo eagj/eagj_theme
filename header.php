@@ -33,8 +33,14 @@
     <!--menu-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     
-        <div class="container-fluid">        
-            <a class="navbar-brand" href="<?php echo home_url('/')?>">LOGO</a>            
+        <div class="container-fluid">
+            <?php
+                if(has_custom_logo()):
+                    the_custom_logo();
+                else:
+                    echo '<a class="navbar-brand" href="'.esc_url(home_url('/')).'">' .get_bloginfo('name').'</a>';
+                endif;
+            ?> 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
