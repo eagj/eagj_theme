@@ -35,10 +35,8 @@
             <?php get_template_part('template_parts/content', 'pagination')?>
         </section>        
         <!--Paginacion-->
-        <!-- PRUEBA DE SIDEBAR-->
-        <aside>
-        <?php get_sidebar();?>
-        </aside>
+        <!-- PRUEBA DE SIDEBAR PERO LO COMENTO PORQUE NO LO NECESITO-->
+        <//?php get_sidebar();?> 
     </div>
 
   <?php get_footer();?>
