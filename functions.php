@@ -57,14 +57,25 @@ if (!function_exists( 'eagj_setup' ) ):
       'caption'
     ));
 
-     //LOGO PERSONZALIDO
+     //LOGO PERSONALIZADO
      add_theme_support('custom-logo', array(
       'height' => 100,
       'width' => 100,
       'flex-height'=>true,
       'flex-width'=>true,
     ));
-
+    
+    //FONDO DE CABECERA SUPERIOR COLOR E IMAGEN
+    // add_theme_support('custom-background', array(
+    //   //'default-color'=> '000',
+    //   'default-text-color'=>'fff',
+    //   //'default-image'=> get_template_directory_uri().'/image/default.jpg',
+    //   'default-repeat'=> 'repeat',
+    //   'default-position-x'=> '',
+    //   'default-position-y'=> '',
+    //   'default-size'=> '',
+    //   'default-attachment'=> 'fixed'
+    // ));
  }
 endif;
 add_action( 'after_setup_theme', 'eagj_setup' );
@@ -125,4 +136,5 @@ if (!function_exists( 'eagj_register_sidebars' ) ):
     
   }
 endif;
- add_action( 'widgets_init', 'eagj_register_sidebars' );
+add_action( 'widgets_init', 'eagj_register_sidebars' );
+//require_once get_template_directory().'/inc/custom-header-php'
